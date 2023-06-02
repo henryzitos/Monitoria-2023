@@ -85,3 +85,24 @@ fimpara
 
 escreval("A soma dos números múltiplos de três e de cinco que estão no vetor são: ", st + sc)
 Fimalgoritmo
+---------------------
+Algoritmo "ProvaAEx3"
+
+Var
+p, i, j, y, k: inteiro
+
+Inicio
+escreval("Digite o elemento a calcular: ")
+leia(p)
+i <- 0
+j <- 1
+k <- 1
+enquanto (k <= (p-1)) faça
+         y <- i + j
+         i <- j
+         j <- y
+         k <- k + 1
+fimenquanto
+escreval("Valor calculado = ", j)
+
+Fimalgoritmo
