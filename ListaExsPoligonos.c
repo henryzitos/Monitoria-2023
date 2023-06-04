@@ -3,7 +3,6 @@
 
 int main(){
 	retangulo();
-	printf("\n");
 	circulo();
 	triangulo();
 }
@@ -25,7 +24,7 @@ void retangulo(){
 void circulo(){
     float r, a, p = 0;
 
-    printf("Digite o raio da circunferência: ");
+    printf("\nDigite o raio da circunferência: ");
     scanf("%f", &r);
 
     a = 3.14 * (r * r);
