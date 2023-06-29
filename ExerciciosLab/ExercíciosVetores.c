@@ -13,7 +13,23 @@ void mms(){
         printf("\nDigite um número: ");
         scanf("%i", &v[i]);
     }
+    
     int menor = v[0];
+    for (int i = 0; i < 5; i++) { 
+        if (menor == 0){
+            menor = v[i];
+        }
+    }
+    
+    /* 
+    menor <- v[1]
+    para i de 1 até 5 passo 1 faça
+        se (menor = 0) entao
+          menor <- v[i]
+        fimse
+    fimpara
+    */
+    
     int maior = v[0];
     
     for (int i = 0; i < 5; i++) {
@@ -35,12 +51,16 @@ void mms(){
     
     if (maior % 2 == 0){
         printf("\nO maior número par do vetor é: %i", maior);
+    } else if (maior == 0){
+        printf("\nSeu maior número ímpar não existe.");
     } else {
         printf("\nNão há números pares no seu vetor.");
-    }
+    } 
     
     if (menor % 2 != 0){
         printf("\nO menor número ímpar do vetor é: %i", menor);   
+    } else if (menor == 0){
+        printf("\nSeu menor número ímpar não existe.");
     } else {
         printf("\nNão há números ímpares no seu vetor.");
     }
