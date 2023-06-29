@@ -17,7 +17,7 @@ Inicio
             escreva(" ",v[i])
     fimpara
     
-    para i de 1 até 6 - 1 passo 1 faça
+    para i de 1 até 5 passo 1 faça
         para j de 1 até 6 - i - 1 passo 1 faça
             se (v[j] > v[j + 1]) entao
                 aux <- v[j]
