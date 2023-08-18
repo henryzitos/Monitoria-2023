@@ -69,5 +69,43 @@ void inss(){
 }
 
 void posto(){
-    float l, t
+    float l, d, t = 0;
+    char c;
+    
+    printf("\nDigite quantos litros de combustível foram colocados: ");
+    scanf("%f", &l);
+    fflush(stdin);
+    printf("\nDigite qual o tipo de combustível (A/a para álcool | G/g para gasolina)");
+    scanf("%c", &c);
+    
+    while(c != 'a' && c != 'A' && c != 'g' && c != 'G'){
+        printf("\nDigite uma opção válida: ");
+        scanf("%c", &c);
+    }
+    
+    if(c == 'a' || c == 'A'){
+        if(l <= 25){
+            d = 3.8 * (2/100);
+            t = l * d;
+        } else {
+            d = 3.8 * (4/100);
+            t = l * d;
+        }
+        printf("\nCombustível: Álcool");
+        printf("\nLitros: %.2f", l);
+        printf("\nO total da conta é: R$%.2f ", t);
+    }
+    
+    if(c == 'g' || c == 'G'){
+        if(l <= 25){
+            d = 4.9 * (3/100);
+            t = l * d;
+        } else {
+            d = 4.9 * (5/100);
+            t = l * d;
+        }
+        printf("\nCombustível: Gasolina");
+        printf("\nLitros: %.2f", l);
+        printf("\nO total da conta é: R$%.2f", t);
+    }
 }
